@@ -1,0 +1,28 @@
+# Node.js and npm
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Vite specific
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.cache
+
+# Backend sensitive files
+backend/.env
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Build output
+build/
+dist/
+
+# Misc
+*.bak
+*.swp
