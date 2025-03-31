@@ -18,6 +18,17 @@ mongoose.connect(process.env.MONGO_URI, {
 // Schema and Model
 const MessageSchema = new mongoose.Schema({ text: String });
 const Message = mongoose.model('Message', MessageSchema);
+const buyerRoutes = require('./routes/buyer');
+const sellerRoutes = require('./routes/seller');
+const carRoutes = require('./routes/car');
+const dealRoutes = require('./routes/deal');
+const reportRoutes = require('./routes/report');
+
+app.use('/api/report', reportRoutes);
+app.use('/api/buyers', buyerRoutes);
+app.use('/api/sellers', sellerRoutes);
+app.use('/api/cars', carRoutes);
+app.use('/api/deals', dealRoutes);
 
 // API to fetch message
 app.get('/', async (req, res) => {
