@@ -7,4 +7,8 @@ const DealSchema = new mongoose.Schema({
   deal_amt: { type: Number, required: true }
 });
 
+DealSchema.index({ deal_amt: 1 });
+DealSchema.index({ buyer_id: 1 });
+DealSchema.index({ seller_id: 1 });
+
 module.exports = mongoose.model('Deal', DealSchema);

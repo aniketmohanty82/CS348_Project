@@ -5,4 +5,6 @@ const BuyerSchema = new mongoose.Schema({
   budget: { type: Number, required: true }
 });
 
+BuyerSchema.index({ name: 1 });
+
 module.exports = mongoose.model('Buyer', BuyerSchema);
